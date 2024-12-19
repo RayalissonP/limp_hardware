@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Preços</title>
+    <link rel="stylesheet" href="assets/styles.css">
+ <script src="assets/script.js"></script>
+</head>
+<body>
+    <main class="container">
+         <h1>Calculadora - Preço de Limpeza de Hardware</h1>
+         <h2>Selecione os componentes:</h2>
+
+        <form id="calculatorForm">
+         <section>
+            <label for="gabinete">Gabinete:</label>
+            <select id="gabinete" onchange="calcularTotal()">
+                <option value="0">Selecione uma opção</option>
+                <option value="10">A: Mini-ITX - R$10</option>
+                <option value="10">B: Micro-ATX - R$10</option>
+                <option value="15">C: ATX - R$15</option>
+                <option value="20">D: EATX - R$20</option>
+            </select>
+        </section>
+
+            <section>
+                <label for="fonte">Fonte de Alimentação:</label>
+                <select id="fonte" onchange="calcularTotal()">
+                    <option value="0">Selecione uma opção</option>
+                    <option value="15">A: 100W à 350W - R$15</option>
+                    <option value="20">B: 400W à 650W - R$20</option>
+                    <option value="30">C: 700W e acima - R$30</option>
+                </select>
+            </section>
+
+            <section>
+                <label for="placa">Placa Mãe/Processador:</label>
+                <select id="placa" onchange="calcularTotal()">
+                    <option value="0">Selecione uma opção</option>
+                    <option value="5">A: Pico-ITX - R$5</option>
+                    <option value="10">B: Nano-ITX - R$10</option>
+                    <option value="15">C: Mini-ITX - R$15</option>
+                    <option value="20">D: Micro-ATX - R$20</option>
+                    <option value="30">E: Standard-ATX - R$30</option>
+                </select>
+            </section>
+
+            <section>
+               <label for="airCooler">Aircooler:</label>
+               <select id="airCooler" onchange="calcularTotal()">
+                   <option value="0">Selecione uma opção</option>
+                   <option value="5">A: 80mm à 120mm - R$5</option>
+                   <option value="10">B: 140mm à 200mm - R$10</option>
+               </select>
+           </section>
+
+           <section id="water">
+               <label for="waterCooler">Watercooler:</label>
+               <select id="waterCooler" onchange="calcularTotal()">
+                   <option value="0">Selecione uma opção</option>
+                   <option value="10">A: 120mm - R$10</option>
+                   <option value="20">B: 240mm - R$20</option>
+                   <option value="25">C: 360mm - R$25</option>
+               </select>
+               <label for="fansExtras" id="qtd_fans">Quantidade de Fans Extras:</idlabel>
+               <input type="number" id="fansExtras" value="0" min="0" onchange="calcularTotal()">
+           </section>
+            
+            <section>
+               <label for="memoria">Memória RAM:</label>
+               <select id="memoria" onchange="calcularTotal()">
+                   <option value="0">Selecione uma opção</option>
+                   <option value="5">A: DDR2 - R$5</option>
+                   <option value="5">B: DDR3 - R$5</option>
+                   <option value="5">C: DDR4 - R$5</option>
+                   <option value="10">D: DDR5 - R$10</option>
+               </select>
+               <label>
+                   <input type="checkbox" id="dissipador" onchange="calcularTotal()"> Adicionar dissipador (R$5)
+               </label>
+           </section>
+           
+           <section>
+            <label for="armazenamento">Armazenamento:</label>
+            <select id="armazenamento" onchange="calcularTotal()">
+                <option value="0">Selecione uma opção</option>
+                <option value="5">A: HD - R$5</option>
+                <option value="5">B: SSD - R$5</option>
+                <option value="10">C: NVME.M2 - R$10</option>
+            </select>
+        </section>
+
+            <section>
+                <label for="placaVideo">Placa de Vídeo:</label>
+                <select id="placaVideo" onchange="calcularTotal()">
+                    <option value="0">Selecione uma opção</option>
+                    <option value="5">A: Apenas Dissipador - R$5</option>
+                    <option value="10">B: Mini Fan - R$10</option>
+                    <option value="15">C: 1 Fan - R$15</option>
+                    <option value="20">D: 2 Fans ou mais - R$20</option>
+                </select>
+            </section>
+
+            <section id="extras">
+                <fieldset>
+                    <legend>Extras:</legend>
+                    <label><input type="checkbox" class="extra" value="5" onchange="calcularTotal()"> Controladora - R$5</label><br> 
+                    <label><input type="checkbox" class="extra" value="5" onchange="calcularTotal()"> Leitor DVD - R$5</label><br>
+                    <label><input type="checkbox" class="extra" value="5" onchange="calcularTotal()"> Leitor SD/MMOD - R$5</label><br>
+                    <label for="fansExtrasExtras">Quantidade de Fans Adicionais no Gabinete:</label>
+                    <input type="number" id="fansExtrasExtras" value="0" min="0" onchange="calcularTotal()">
+                </fieldset>
+            </section>
+
+            <button type="button" onclick="limparSelecoes()">Limpar Tudo</button>
+        </form>
+
+        <p id="total">TOTAL: R$0.00</p>
+    </main>
+</body>
+</html>
