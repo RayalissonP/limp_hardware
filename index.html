@@ -117,15 +117,35 @@
                 </fieldset>
             </section>
 
+            <!--- Links
             <div id="info">
                <a href="assets/images/Tamanhos de Placas.png " target=”_blank”> Tamanho de Placas-mãe</a>
                <a href="assets/images/Tamanhos Gabinetes.jpg" target=”_blank”>Tamanho de Gabinetes</a>
             </div>
+            -->
 
-            <button type="button" onclick="limparSelecoes()">Limpar Tudo</button>
+            <button type="button" onclick="limparSelecoes()">Limpar Tudo</button>    
         </form>
 
+
         <p id="total">TOTAL: R$ 0.00</p>
+
+        <div class="container-modal">
+            <h2>Informações Extras</h2>
+            <button id="openModalPlacas">Ver Tamanhos de Placas-mãe</button>
+            <button id="openModalGabinetes">Ver Tamanhos de Gabinetes</button>
+         </div>
+      
+         <!-- Modal -->
+         <div id="modal" class="modal">
+            <div class="modal-content">
+               <span class="close">&times;</span>
+               <h2 id="modalTitle">Título do Modal</h2>
+               <img id="modalImage" src="" alt="Descrição da Imagem">
+            </div>
+         </div>
     </main>
+
+    <script src="assets/script-modsl.js"></script>
 </body>
 </html>
