@@ -107,10 +107,10 @@ legend {
    position: absolute;
    top: 10px;
    right: 20px;
-   font-size: 24px;
+   font-size: 40px;
    font-weight: bold;
    cursor: pointer;
-   color: #333;
+   color: #727272;
 }
 
 .close:hover {
@@ -119,9 +119,24 @@ legend {
 
 .container-modal {
    text-align: center;
+   padding-top: 8px;
 }
 
+.container-modal > h2 {
+   font-size: 18px;
+   color: #111111;
+}
 
+#openModalPlacas, #openModalGabinetes {
+   padding: 8px 12px;
+   background-color: rgba(255, 68, 0, 0.863);
+   font-size: 14px;
+   font-weight: 600;
+}
+
+#openModalPlacas:hover, #openModalGabinetes:hover {
+   opacity: 0.8;
+}
 
 #total {
    font-size: 18px;
