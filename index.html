@@ -29,6 +29,8 @@
                 <option value="15">ATX - Mid Tower - R$ 15,00</option>
                 <option value="20">EATX - Full Tower - R$ 20,00</option>
             </select>
+            <label for="fansExtrasExtras" id="qtd_fansG">Quantidade de Fans Extras no Gabinete (+R$ 5,00 cada):</idlabel>
+                <input type="number" id="fansExtrasExtras" value="0" min="0" onchange="calcularTotal()">
         </section>
 
             <section>
@@ -94,7 +96,7 @@
                 <option value="0">Selecione uma opção</option>
                 <option value="5">HDD SATA - R$ 5,00</option>
                 <option value="5">SSD SATA - R$ 5,00</option>
-                <option value="10">SSD NVME.M2 - R$ 10,00</option>
+                <option value="10">SSD NVMe.M2 - R$ 10,00</option>
             </select>
         </section>
 
@@ -115,8 +117,9 @@
                     <label><input type="checkbox" class="extra" value="5" onchange="calcularTotal()"> Controladora - R$ 5,00</label><br> 
                     <label><input type="checkbox" class="extra" value="5" onchange="calcularTotal()"> Leitor DVD - R$ 5,00</label><br>
                     <label><input type="checkbox" class="extra" value="5" onchange="calcularTotal()"> Leitor SD/MMOD - R$ 5,00</label><br>
+                    <!--
                     <label for="fansExtrasExtras">Quantidade de Fans Adicionais no Gabinete (+R$ 5,00 cada):</label>
-                    <input type="number" id="fansExtrasExtras" value="0" min="0" onchange="calcularTotal()">
+                    <input type="number" id="fansExtrasExtras" value="0" min="0" onchange="calcularTotal()">-->
                 </fieldset>
             </section>
 
