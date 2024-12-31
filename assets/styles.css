@@ -14,9 +14,21 @@ body {
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.title {
+   border-radius: 14px;
+   display: grid;
+   place-content: center;
+   background-color: #3a3a3a;
+}
+
 h1 {
-   text-align: center;
-   color: #202020;
+   font-size: 50px;
+   font-weight: 800;
+   color: white;
+   background: linear-gradient(to right, rgb(149 114 252), rgb(67 231 173), rgb(226 212 92));
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
 }
 
 h2 {
