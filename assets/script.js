@@ -29,7 +29,9 @@
          const fansExtrasExtras = parseInt(document.getElementById("fansExtrasExtras").value) || 0;
          total += fansExtrasExtras * 5; // Cada fan extra custa R$5
 
-         document.getElementById("total").textContent = `Total: R$ ${total.toFixed(2)}`;
+         /*document.getElementById("total").textContent = `Total: R$ ${total.toFixed(2)}`;*/
+         // Formatar total com vírgula como separador decimal
+         document.getElementById("total").textContent = `Total: R$ ${total.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
      }
 
      // Função para limpar as seleções
