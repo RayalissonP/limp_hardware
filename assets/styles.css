@@ -36,6 +36,11 @@ h2 {
    color: #272727;
 }
 
+h3 {
+   text-align: center;
+   color: #272727;
+}
+
 form {
    display: grid;
    gap: 15px;
@@ -142,6 +147,7 @@ legend {
 
 #openModalPlacas, #openModalGabinetes {
    padding: 8px 12px;
+   margin: 6px;
    background-color: #79B864;
    font-size: 15px;
    font-weight: 700;
