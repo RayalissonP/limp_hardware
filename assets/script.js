@@ -16,7 +16,7 @@
          // Adicionar valor extra se a memória tiver dissipador
          const memoriaComDissipador = document.getElementById("dissipador").checked;
          if (memoriaComDissipador) {
-             total += 5;
+             total += 10;
          }
 
          // Somar valores dos extras marcados
